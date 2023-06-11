@@ -1,0 +1,33 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+
+spring:
+  # todo 개발 데이터베이스 연결
+  datasource:
+    url: jdbc:h2:mem:test
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true # 콘솔창에 sql 을 출력해줌.
+    properties:
+      hibernate:
+        format_sql: true # 콘솔창에 sql 문이 출력이 되는데 이쁘게 포맷해줌.
+        default_batch_fetch_size: 500 # 일대다 컬렉션 조회 시 성능 최적화
+    open-in-view: false # 영속성 컨텍스트 생존 범위를 트랜잭션 범위(service, repository)로 한정
+                        # 이렇게 사용하게되면 내부 프로퍼티를 호출할 때 controller 레이어에서는 건드릴 수 없게 된다.
+                        # db connection 을 짧게 가지고 있게 되므로 성능이 좋아진다!
+  servlet:
+    multipart:
+      max-file-size: 10MB # 파일 업로드 요청 시 하나의 파일 크기를 10MB 로 제한.
+      max-request-size: 100MB # 파일 업로드 요청 시 모든 파일 크기의 총합을 100MB 로 제한.
+
+logging:
+  level:
+    org.hibernate.type: trace # 조회 결과 출력
+
+
