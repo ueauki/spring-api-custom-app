@@ -26,8 +26,16 @@ spring:
       max-file-size: 10MB # 파일 업로드 요청 시 하나의 파일 크기를 10MB 로 제한.
       max-request-size: 100MB # 파일 업로드 요청 시 모든 파일 크기의 총합을 100MB 로 제한.
 
+
 logging:
   level:
     org.hibernate.type: trace # 조회 결과 출력
+    com.app: debug # spring cloud openfeign 의 로그를 보기 위해서 루트 패키지 기준으로 debug 설정
 
+feign:
+  client:
+    config:
+      default:
+        connect-timeout: 5000 # 연결 값 5초
+        read-timeout: 5000 # 응답 값 5초
 

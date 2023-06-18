@@ -27,7 +27,9 @@ dependencies {
 	runtimeOnly("com.h2database:h2")
 	annotationProcessor("org.projectlombok:lombok")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
+	implementation ("org.springframework.cloud:spring-cloud-starter-openfeign:3.1.3")
 }
+
 
 tasks.withType<Test> {
 	useJUnitPlatform()
