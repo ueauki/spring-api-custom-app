@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.app.spring-api-custom-app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.app.spring-api-custom-app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.app.spring-api-custom-app.main~2.iml" filepath="$PROJECT_DIR$/.idea/modules/com.app.spring-api-custom-app.main~2.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/spring-api-custom-app.iml" filepath="$PROJECT_DIR$/.idea/spring-api-custom-app.iml" />
     </modules>
   </component>

@@ -3,4 +3,4 @@ spring:
 
 logging:
   level:
-    com.app: error # todo 패키지 수정
+    com.app: info # todo 패키지 수정

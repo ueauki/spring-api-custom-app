@@ -10,7 +10,7 @@ import org.springframework.http.HttpStatus;
 @Slf4j
 public class FeignClientExceptionErrorDecoder implements ErrorDecoder {
 
-    private ErrorDecoder errorDecoder = new Default();
+    private final ErrorDecoder errorDecoder = new Default();
 
     @Override
     public Exception decode(String methodKey, Response response) {

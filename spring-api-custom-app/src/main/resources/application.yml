@@ -6,7 +6,7 @@ server:
 spring:
   # todo 개발 데이터베이스 연결
   datasource:
-    url: jdbc:h2:mem:test
+    url: jdbc:h2:~/test
     username: sa
     password:
     driver-class-name: org.h2.Driver
@@ -39,3 +39,12 @@ feign:
         connect-timeout: 5000 # 연결 값 5초
         read-timeout: 5000 # 응답 값 5초
 
+kakao:
+  client:
+    id: a3a6aaa1d75c734489bd5afae97cce0f
+    secret: ZfZQIdw1h1oWj4N1WTSTO4XmHDUGVaoI
+
+token:
+  secret: and0LXRva2VuLXNlY3JldA== # 임의의 문자열
+  access-token-expiration-time: 900000 # 15분 1000(ms) x 60(s) x 15(m)
+  refresh-token-expiration-time: 1209600000 # 2주 1000(ms) x 60 (s) x 60(m) x 24(h) x 14(d)
